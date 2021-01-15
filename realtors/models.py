@@ -9,3 +9,6 @@ class Realtor(models.Model):
     email = models.EmailField()
     is_mvp = models.BooleanField(default=False)
     hire_date = models.DateTimeField(default=datetime.now, blank=True)
+
+    def __str__(self):
+        return "<Realtor {self.name}>".format(self.name)
